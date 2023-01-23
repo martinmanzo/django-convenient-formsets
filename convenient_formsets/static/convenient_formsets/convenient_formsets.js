@@ -522,7 +522,7 @@ const ConvenientFormset = function(options) {
 
         if (formsetOptions.canAddForms) {
             selector = formsetOptions.emptyFormSelector;
-            formsetElements.emptyForm = document.querySelector(selector);
+            formsetElements.emptyForm = document.querySelector(selector).content.querySelector(formsetOptions.formSelector);
             if (formsetElements.emptyForm === null) {
                 missingElements.push(selector);
             }
